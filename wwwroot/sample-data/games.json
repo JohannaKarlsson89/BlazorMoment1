@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Destiny2",
+        "category": "Massively multiplayer online game",
+        "published": "2017",
+        "developer": "Bungie"
+    },
+    {
+        "name": "Escape from Tarkov",
+        "category": "Adventure, fps",
+        "published": "2017",
+        "developer": "Battlestate Games"
+    },
+    {
+        "name": "Rimworld",
+        "category": "Construction and management simulation",
+        "published": "2013",
+        "developer": "Ludeon Studios"
+    }
+]

@@ -1,0 +1,138 @@
+body {
+    background-color: rgb(255, 142, 67);
+}
+/* LAYOUT*/
+ .grid {
+   background-color: rgb(255, 255, 255);
+   width: 90%;
+   padding: 2%;
+   margin: 0 auto;
+}
+
+/* LOGGA */
+.div1 a {
+   margin: 2% 0 0 2%;
+   color: orange;
+   font-size: 2em;
+   font-family: 'Courier New', Courier, monospace;
+   text-decoration: none;    
+}
+/*  NAVIGERING */
+.div2 {
+   background-color: rgb(247, 247, 208);
+   display: flex;
+    justify-content: space-evenly;
+
+  }
+
+  .div2 ul {
+   list-style: none;
+}
+.div2 li a {
+   text-decoration: none;
+   color: black;
+}
+.div2 li {
+   padding: 5px 30px;
+   border: 2px solid rgb(240, 174, 99);
+   text-align: center;
+   margin-top: 4%;
+}
+.div2 li:hover {
+   background-color:  rgb(240, 174, 99);
+   border: 2px solid rgb(160, 116, 66);
+   text-decoration: underline ;
+} 
+  
+ 
+/* MAIN */
+
+.div3 {
+   padding: 2% 5%;
+   margin: 2% auto;
+   width: 90% ;
+   overflow-x:auto;
+}
+.div3 button {
+   background-color: rgb(247, 247, 208);
+   border: none;
+   padding: 1%
+}
+.div3 button:hover {
+   background-color:  rgb(240, 174, 99);
+   text-decoration: underline;
+}
+.div3 h2 {
+   color:rgb(255, 142, 67);
+   font-size: 1em;
+        font-family: 'Courier New', Courier, monospace;
+}
+.div3 thead {
+background-color: rgb(247, 247, 208);
+}
+
+.div3 table {
+  
+   border: 1px solid orange;
+   width: 100%;
+}
+.div3 th, .div3 td {
+   padding: 15px;
+  text-align: left;
+  
+ 
+ }
+ .div3 tr:nth-child(even) {background-color: rgb(247, 247, 208);}
+     /* FOOTER */
+
+     .div4 {
+      background-color: bisque;
+      text-align: center;
+      padding: 2%;
+     }
+      /* LAYOUT */
+@media only screen and (min-width: 600px) {
+
+   .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 0.5 repeat(3, 1fr);
+      grid-column-gap: 5px;
+      grid-row-gap: 5px;
+      }
+      .div1 { grid-area: 1 / 1 / 2 / 4; }
+      .div2 { grid-area: 2 / 1 / 4 / 2; }
+      .div3 { grid-area: 2 / 2 / 4 / 4; }
+      .div4 { grid-area: 4 / 1 / 5 / 4; }
+
+              /* NAVIGERING*/
+ .div2 {
+   background-color: rgb(247, 247, 208);
+   display: flex;
+    justify-content: space-evenly;
+    padding: 2% 5%;
+    margin: 2%;
+  }
+  .div2 ul {
+     list-style: none;
+  }
+  .div2 li a {
+     text-decoration: none;
+     color: black;
+  }
+  .div2 li {
+     padding: 5px 30px;
+     border: 2px solid rgb(240, 174, 99);
+     text-align: center;
+     margin-top: 19%;
+  }
+  .div2 li:hover {
+     background-color:  rgb(240, 174, 99);
+     border: 2px solid rgb(160, 116, 66);
+     text-decoration: underline ;
+  } 
+    }
+
+#blazor-error-ui {
+   display: none;
+}

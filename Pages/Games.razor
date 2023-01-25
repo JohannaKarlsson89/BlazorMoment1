@@ -1,0 +1,43 @@
+@page "/games"
+@inject HttpClient Http
+
+<h2>Spel jag spelar</h2>
+@if(games == null) {
+<p>Laddar spel</p>
+}else {
+    <table>
+        <thead>
+            <tr>
+                <th>Namn</th>
+                <th>Kategori</th>
+                <th>Publicerat</th>
+                <th>Utvecklare</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var game in games)
+            {
+                <tr>
+                    <td>@game.name</td>
+                    <td>@game.category</td>
+                    <td>@game.published</td>
+                    <td>@game.developer</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    private GamesGames[]? games;
+    protected override async Task OnInitializedAsync() 
+    {
+        games = await Http.GetFromJsonAsync<GamesGames[]>("sample-data/games.json");
+    }
+    public class GamesGames {
+        public string? name {get; set;}
+        public string? category {get; set;}
+        public string? published {get; set;}
+        public string? developer {get; set;}
+    }
+}
